@@ -1,0 +1,10 @@
+    O padrão de projeto Mediator(Mediador) restringe dependências diretas entre objetos, a fim de reduzir comunicações
+caóticas entre eles. Os objetos, nesse padrão, se comunicam atrávés de um objeto mediador, que centraliza-se para que
+possa existir organização nas transações entre os objetos.
+     Um exemplo amplamente utilizado para se entender o problema que o mediator resolve é a criação de formulários que 
+com diversos componentes de interface, tais como caixas de texto, botões variados, caixas de seleção, entre outros.
+No momento do envio do formulário, o botão send só pode ser ativo caso todos os campos obrigatórios estejam preenchidos
+o que gera a necessidade de feedback desse botão vindo de todos os outros objetos obrigatórios, resultando em uma comunicação caótica, multivalorada sem necessidade na execução. As checkboxes podem liberar um campo de texto para preenchimento, o que resulta em mais uma comunicação direta entre os objetos.
+    A solução oferecida pelo padrão mediator é uma classe mediadora centralizada, na qual controla o diálogo entre todos
+os elementos do formulário. Em vez de cada objeto depender de vários objetos, depende apenas da classe mediadora, fato que otimiza a comunicação entre eles e aumenta sua eficiência. Então, temos objetos individuais, que apenas notificam o objeto mediador quando um evento acontece para que o mesmo possa distibuir a informação para as outras classes dependentes. Então, usando esse padrão, temos mais facilidade em criar novos objetos e facilidade em manutenção, já que a alteração em qualquer objeto tem por padrão comunicação apenas com a classe mediadora.
+    No código exemplo, no arquivo "Madiator.cpp" dentro desse repositório, é criado a classe "Mediator" e o método "Notify". As classes "Component1" e "Component2" não possuem interdepência, comunicando-se apenas com a classe "Mediator". Quando acontece algum evento dentro de qualquer um dos dois objetos, o método "Notify" é chamado, sendo assim armazenado na classe "Mediator".

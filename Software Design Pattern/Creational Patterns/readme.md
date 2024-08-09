@@ -1,0 +1,5 @@
+    O padrão Abstract Factory permite criar famílias de objetos sem declarar suas classes concretas. 
+    Pensando na criação de interfaces com diferentes temas, como diurno e noturno, presumimos que pode haver diferenças 
+nos botões, caixas de texto, etc. Atualizações em interfaces, costumeiramente, são frequentes. Então, para cada atualização de interface e para cada tema dessa interface, o código fonte teria de ser alterado. Com o Abstract Factory, podem ser criadas identidades visuais para cada tema sem que precise ser alterado o código, já que são independentes de como os objetos são criados. Esse padrão diminuí dependênciase e falicita atualizações e inclusão de novos objetos. Torna o sistema mais flexível e aumenta sua extensibilidade.
+    No código presente neste repositório nomeado como "AbstractFactory.cpp", foram criadas familias abstratas de
+produtos, A e B, e produtos concretos, também A e B. Todos os produtos concretos(Introduzidos ou Atualizados), tanto de A quanto de B, devem seguir a interface das famílias de produtos abstratos, assim permitindo que o sistema seja flexível e extenso.
